@@ -237,7 +237,7 @@
             <plugin>
                 <groupId>com.lazerycode.jmeter</groupId>
                 <artifactId>jmeter-maven-plugin</artifactId>
-                <version>2.2.0</version>
+                <version>2.4.0</version>
                 <executions>
                     <execution>
                         <id>jmeter-tests</id>
@@ -247,9 +247,10 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <propertiesJMeter>
-                        <reportFile>jmeter-report.csv</reportFile>
-                    </propertiesJMeter>
+                    <jmeterVersion>3.3</jmeterVersion>
+                    <propertiesSystem>
+                        <reportFile>target/jmeter-report.csv</reportFile>
+                    </propertiesSystem>
                 </configuration>
             </plugin>
         </plugins>

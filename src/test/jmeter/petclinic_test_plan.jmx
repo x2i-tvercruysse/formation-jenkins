@@ -79,7 +79,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">${__P(resultFile,/tmp/jmeter-result.csv)}</stringProp>
+        <stringProp name="filename">${__P(resultFile,jmeter-result.csv)}</stringProp>
       </ResultCollector>
       <hashTree/>
     </hashTree>
