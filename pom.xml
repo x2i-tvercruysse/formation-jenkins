@@ -223,7 +223,7 @@
                     <propertyExpansion>main.basedir=${main.basedir}</propertyExpansion>
                     <encoding>UTF-8</encoding>
                     <consoleOutput>true</consoleOutput>
-                    <failOnViolation>true</failOnViolation>
+                    <failOnViolation>fase</failOnViolation>
                     <includeTestSourceDirectory>false</includeTestSourceDirectory>
                 </configuration>
                 <dependencies>
