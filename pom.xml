@@ -223,7 +223,7 @@
                     <propertyExpansion>main.basedir=${main.basedir}</propertyExpansion>
                     <encoding>UTF-8</encoding>
                     <consoleOutput>true</consoleOutput>
-                    <failOnViolation>true</failOnViolation>
+                    <failOnViolation>false</failOnViolation>
                     <includeTestSourceDirectory>false</includeTestSourceDirectory>
                 </configuration>
                 <dependencies>
@@ -233,6 +233,24 @@
                         <version>LATEST</version>
                     </dependency>
                 </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>com.lazerycode.jmeter</groupId>
+                <artifactId>jmeter-maven-plugin</artifactId>
+                <version>2.2.0</version>
+                <executions>
+                    <execution>
+                        <id>jmeter-tests</id>
+                        <goals>
+                            <goal>jmeter</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <propertiesJMeter>
+                        <reportFile>jmeter-report.csv</reportFile>
+                    </propertiesJMeter>
+                </configuration>
             </plugin>
         </plugins>
     </build>
