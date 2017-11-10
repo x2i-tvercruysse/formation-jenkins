@@ -28,6 +28,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class PetClinicApplication {
 
+//TODO C'est bientôt l'heure de la pause, non ?
+
     public static void main(String[] args) throws Exception {
         SpringApplication.run(PetClinicApplication.class, args);
     }
