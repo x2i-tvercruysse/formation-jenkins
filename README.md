@@ -9,7 +9,7 @@
 docker exec -it myjenkins bash
 ssh-keygen
 
-cat /var/jankins_home/.ssh/id_rsa.pub
+cat /var/jenkins_home/.ssh/id_rsa.pub
 ```
 
 ### le slave
@@ -20,5 +20,7 @@ docker inspect slave1 | grep IP
 
 ## sur le master
  - se connecter une fois sur le slave afin d'accepter le certificat et mettre à jour le known host
- - ssh -i id_rsa jenkins@slaveIP
- 
+
+```
+ ssh -i id_rsa jenkins@slaveIP
+``` 
