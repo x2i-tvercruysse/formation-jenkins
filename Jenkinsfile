@@ -9,8 +9,10 @@ pipeline {
     stage('Build') {
       steps {
         echo 'todo build'
-        tool(name: 'M35', type: 'maven')
-        sh 'mvn install'
+        withMaven(maven: 'M35') {
+          mvn install
+      }
+
       }
     }
     stage('Test') {
