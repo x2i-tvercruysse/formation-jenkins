@@ -1,5 +1,24 @@
 # formation-jenkins
 
 
-## Jmeter
-`../apache-jmeter-3.3/bin/jmeter.sh -Jhostname=192.168.33.10 -n -t formation-jenkins.jmx`
+## Création d'un conteneur slave avec docker
+> connection au slave en mode SSH
+
+### le master jenkins 
+```
+docker exec -it myjenkins bash
+ssh-keygen
+
+cat /var/jankins_home/.ssh/id_rsa.pub
+```
+
+### le slave
+```
+docker run --name slave1 jenkinsci/ssh-slave "content of id_rsa.pub"
+docker inspect slave1 | grep IP
+```
+
+## sur le master
+ - se connecter une fois sur le slave afin d'accepter le certificat et mettre à jour le known host
+ - ssh -i id_rsa jenkins@slaveIP
+ 
