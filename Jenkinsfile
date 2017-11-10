@@ -10,7 +10,7 @@ pipeline {
       steps {
         echo 'todo build'
         withMaven(maven: 'M35') {
-          mvn install
+          install
       }
 
       }
