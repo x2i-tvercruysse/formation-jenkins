@@ -8,6 +8,7 @@ import java.util.Set;
 import javax.validation.ConstraintViolation;
 import javax.validation.Validator;
 
+import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
@@ -41,6 +42,7 @@ public class ValidatorTests {
         assertThat(violation.getPropertyPath().toString()).isEqualTo("firstName");
         assertThat(violation.getMessage()).isEqualTo("may not be empty");
         assertThat(false);
+        Assertions.fail("test");
     }
 
 }
