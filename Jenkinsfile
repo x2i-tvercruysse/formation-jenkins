@@ -1,7 +1,7 @@
 pipeline {
   agent {
     node {
-      label 'slave1'
+      label 'any'
     }
     
   }
@@ -10,10 +10,11 @@ pipeline {
       steps {
         echo 'todo build'
         withMaven(maven: 'M35') {
-          sh "mvn clean install"
+          sh 'mvn clean install'
         }
-        checkstyle canComputeNew: false, defaultEncoding: '', healthy: '', pattern: 'target/checkstyle-result.xml', unHealthy: ''
-      }      
+        
+        checkstyle(pattern: 'target/checkstyle-result.xml')
+      }
     }
     stage('Test') {
       steps {
