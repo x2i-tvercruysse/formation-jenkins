@@ -4,11 +4,6 @@ pipeline {
     stage('Build') {
       steps {
         echo 'todo build'
-        withMaven(maven: 'M35') {
-          sh 'mvn clean install'
-        }
-        
-        checkstyle(pattern: 'target/checkstyle-result.xml')
       }
     }
     stage('Test') {
@@ -18,7 +13,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        echo 'deploy'
+        echo 'todo deploy'
       }
     }
   }
