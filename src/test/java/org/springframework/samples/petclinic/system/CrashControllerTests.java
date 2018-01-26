@@ -31,7 +31,7 @@ public class CrashControllerTests {
 
     @Test
     public void testTriggerException() throws Exception {
-        mockMvc.perform(get("/oups")).andExpect(view().name("exception"))
+        mockMvc.perform(get("/oups")).andExpect(view().name("exception22222"))
                 .andExpect(model().attributeExists("exception"))
                 .andExpect(forwardedUrl("exception")).andExpect(status().isOk());
     }
