@@ -1,3 +1,6 @@
+a6385bc801c0aa34085d37d9a6f8f48752ffda62
+
+
 # Spring PetClinic Sample Application [![Build Status](https://travis-ci.org/spring-projects/spring-petclinic.png?branch=master)](https://travis-ci.org/spring-projects/spring-petclinic/)
 
 ## Understanding the Spring Petclinic application with a few diagrams
