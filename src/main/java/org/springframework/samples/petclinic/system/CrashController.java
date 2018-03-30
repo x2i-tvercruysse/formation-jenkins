@@ -31,6 +31,7 @@ class CrashController {
 
     @RequestMapping(value = "/oups", method = RequestMethod.GET)
     public String triggerException() {
+        //OG-TODO secure request parameters to avoid SQL injection
         throw new RuntimeException(
                 "Expected: controller used to showcase what " + "happens when an exception is thrown");
     }
