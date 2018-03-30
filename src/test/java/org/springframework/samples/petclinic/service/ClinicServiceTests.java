@@ -65,7 +65,7 @@ public class ClinicServiceTests {
         Collection<Owner> owners = this.owners.findByLastName("Davis");
         assertThat(owners.size()).isEqualTo(100);
 
-        owners = this.owners.findByLastName("Daviss");
+        owners = this.owners.findByLastName("Davis");
         assertThat(owners.isEmpty()).isTrue();
     }
 
