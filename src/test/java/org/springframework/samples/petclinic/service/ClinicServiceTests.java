@@ -63,7 +63,7 @@ public class ClinicServiceTests {
     @Test
     public void shouldFindOwnersByLastName() {
         Collection<Owner> owners = this.owners.findByLastName("Davis");
-        assertThat(owners.size()).isEqualTo(2);
+        assertThat(owners.size()).isEqualTo(100);
 
         owners = this.owners.findByLastName("Daviss");
         assertThat(owners.isEmpty()).isTrue();
