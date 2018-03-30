@@ -4,6 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'todo build new branch'
+        echo 'petite pause après'
       }
     }
     stage('Test') {
