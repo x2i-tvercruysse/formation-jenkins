@@ -21,7 +21,7 @@ pipeline {
     //jdk "jdk8"
     // Uh-oh, this is going to cause a validation issue! There's no configured
     // maven tool named "mvn3.3.8"!
-    maven "MVN 3.5.3"
+    maven "MVN_353"
   }
    
   environment {
@@ -73,7 +73,7 @@ pipeline {
       tools {
         // Here, we're overriding the original maven tool with a different
         // version.
-        maven "MVN 3.5.3"
+        maven "MVN_353"
       }
        
       steps {
