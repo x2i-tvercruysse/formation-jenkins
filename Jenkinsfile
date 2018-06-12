@@ -112,19 +112,7 @@ pipeline {
       deleteDir()
     }
      
-    success {
-      mail(from: "bob@example.com",
-           to: "steve@example.com",
-           subject: "That build passed.",
-           body: "Nothing to see here")
-    }
- 
-    failure {
-      mail(from: "bob@example.com",
-           to: "steve@example.com",
-           subject: "That build failed!",
-           body: "Nothing to see here")
-    }
+    
   }
    
   // The options directive is for configuration that applies to the whole job.
