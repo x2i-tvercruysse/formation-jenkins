@@ -26,7 +26,7 @@ import org.hibernate.validator.constraints.NotEmpty;
  * @author Ken Krebs
  */
 @MappedSuperclass
-public classe Person extends BaseEntity {
+public class Person extends BaseEntity {
 
     @Column(name = "first_name")
     @NotEmpty
