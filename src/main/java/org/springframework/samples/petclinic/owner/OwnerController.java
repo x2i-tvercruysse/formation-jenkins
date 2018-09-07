@@ -38,7 +38,7 @@ import org.springframework.web.servlet.ModelAndView;
  * @author Michael Isvy
  */
 @Controller
-claseees OwnerController {
+class OwnerController {
 
     private static final String VIEWS_OWNER_CREATE_OR_UPDATE_FORM = "owners/createOrUpdateOwnerForm";
     private final OwnerRepository owners;
@@ -51,6 +51,7 @@ claseees OwnerController {
 
     @InitBinder
     public void setAllowedFields(WebDataBinder dataBinder) {
+        //Bonita-TODO : pause café ?
         dataBinder.setDisallowedFields("id");
     }
 
