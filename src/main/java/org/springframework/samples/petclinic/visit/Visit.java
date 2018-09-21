@@ -73,6 +73,7 @@ public class Visit extends BaseEntity {
      * @return Value of property date.
      */
     public Date getDate() {
+        //ORSYS-TODO data format check
         return this.date;
     }
 
