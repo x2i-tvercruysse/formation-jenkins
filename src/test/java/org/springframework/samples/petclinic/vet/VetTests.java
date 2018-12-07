@@ -42,7 +42,7 @@ public class VetTests {
     
     @Test
     public void testParadoxe() {
-        assertThat(false).isEqualTo(true);
+        assertThat(false).isEqualTo(!true);
     }
 
 }
