@@ -77,20 +77,10 @@ public class Visit extends BaseEntity {
         return this.date;
     }
 
-    /**
-     * Setter for property date.
-     *
-     * @param date New value of property date.
-     */
     public void setDate(Date date) {
         this.date = date;
     }
 
-    /**
-     * Getter for property description.
-     *
-     * @return Value of property description.
-     */
     public String getDescription() {
         return this.description;
     }
