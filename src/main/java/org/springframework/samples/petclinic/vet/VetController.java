@@ -45,6 +45,7 @@ class VetController {
         Vets vets = new Vets();
         vets.getVetList().addAll(this.vets.findAll());
         model.put("vets", vets);
+        //LP-TODO : remplacer par appel WS
         return "vets/vetList";
     }
 
