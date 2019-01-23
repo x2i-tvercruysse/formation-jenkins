@@ -1,5 +1,5 @@
 # formation-jenkins
-Une modification
+Une modification par le formateur
 
 ## Création d'un conteneur slave avec docker
 > connection au slave en mode SSH
