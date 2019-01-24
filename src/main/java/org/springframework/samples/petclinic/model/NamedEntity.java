@@ -37,7 +37,6 @@ public class NamedEntity extends BaseEntity {
     }
 
     public void setName(String name) {
-        //CRY-TODO penser a valider le format du nom
         this.name = name;
     }
 
