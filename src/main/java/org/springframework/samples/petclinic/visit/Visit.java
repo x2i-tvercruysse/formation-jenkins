@@ -91,6 +91,7 @@ public class Visit extends BaseEntity {
      * @param description New value of property description.
      */
     public void setDescription(String description) {
+        //CRY-TODO je suis caché ici
         this.description = description;
     }
 
