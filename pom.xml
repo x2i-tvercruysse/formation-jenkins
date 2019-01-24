@@ -229,7 +229,7 @@
                     <headerLocation>src/checkstyle/checkstyle-header.txt</headerLocation>
                     <propertyExpansion>main.basedir=${main.basedir}</propertyExpansion>
                     <encoding>UTF-8</encoding>
-                    <consoleOutput>true</consoleOutput>
+                    <consoleOutput>false</consoleOutput>
                     <failOnViolation>false</failOnViolation>
                     <includeTestSourceDirectory>false</includeTestSourceDirectory>
                 </configuration>
