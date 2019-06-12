@@ -34,7 +34,7 @@ public class PetValidator implements Validator {
 
     @Override
     public void validate(Object obj, Errors errors) {
-        //ORSYSFIXME : this rule is very bad
+        
         Pet pet = (Pet) obj;
         String name = pet.getName();
         // name validation
