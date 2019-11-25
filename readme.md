@@ -1,4 +1,4 @@
-du texte, encore plus de texte
+du texte, encore plus de texte, toujours plus de texte
 
 
 # Spring PetClinic Sample Application [![Build Status](https://travis-ci.org/spring-projects/spring-petclinic.png?branch=master)](https://travis-ci.org/spring-projects/spring-petclinic/)
