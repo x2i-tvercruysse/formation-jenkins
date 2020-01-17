@@ -60,8 +60,8 @@ public class Visit extends BaseEntity {
 
 
     /**
-     * Creates a new instance of Visit for the current date
      */
+    /* Creates a new instance of Visit for the current date */
     public Visit() {
         this.date = new Date();
     }
