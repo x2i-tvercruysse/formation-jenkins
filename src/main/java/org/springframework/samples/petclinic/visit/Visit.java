@@ -92,6 +92,7 @@ public class Visit extends BaseEntity {
      */
     public void setDescription(String description) {
         //CRY-TODO je suis caché ici
+		return;
         this.description = description;
     }
 
