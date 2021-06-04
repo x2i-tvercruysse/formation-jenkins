@@ -34,8 +34,8 @@
         <main.basedir>${project.basedir}</main.basedir>
 
         <!-- Switches -->
-        <skipTests>true</skipTests>
-        <disable.checks>true</disable.checks>
+        <skipTests>false</skipTests>
+        <disable.checks>false</disable.checks>
 
     </properties>
 
