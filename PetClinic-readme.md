@@ -1,4 +1,4 @@
-2d2e4c7c50b36428d7826ae5455244fab6b701f6
+du texte, encore plus de texte
 
 
 # Spring PetClinic Sample Application [![Build Status](https://travis-ci.org/spring-projects/spring-petclinic.png?branch=master)](https://travis-ci.org/spring-projects/spring-petclinic/)

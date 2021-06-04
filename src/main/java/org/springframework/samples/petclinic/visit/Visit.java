@@ -73,23 +73,14 @@ public class Visit extends BaseEntity {
      * @return Value of property date.
      */
     public Date getDate() {
+        //ORSYS-TODO data format check
         return this.date;
     }
 
-    /**
-     * Setter for property date.
-     *
-     * @param date New value of property date.
-     */
     public void setDate(Date date) {
         this.date = date;
     }
 
-    /**
-     * Getter for property description.
-     *
-     * @return Value of property description.
-     */
     public String getDescription() {
         return this.description;
     }
@@ -100,6 +91,7 @@ public class Visit extends BaseEntity {
      * @param description New value of property description.
      */
     public void setDescription(String description) {
+        //CRY-TODO je suis caché ici
         this.description = description;
     }
 

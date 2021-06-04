@@ -51,6 +51,7 @@ class OwnerController {
 
     @InitBinder
     public void setAllowedFields(WebDataBinder dataBinder) {
+        //Bonita-TODO : pause café ?
         dataBinder.setDisallowedFields("id");
     }
 

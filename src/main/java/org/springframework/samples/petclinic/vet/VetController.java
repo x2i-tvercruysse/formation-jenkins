@@ -30,7 +30,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 class VetController {
-
+    //ORSYSTODO rename property
     private final VetRepository vets;
 
     @Autowired
@@ -45,6 +45,7 @@ class VetController {
         Vets vets = new Vets();
         vets.getVetList().addAll(this.vets.findAll());
         model.put("vets", vets);
+        //LP-TODO : remplacer par appel WS
         return "vets/vetList";
     }
 

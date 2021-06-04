@@ -39,5 +39,10 @@ public class VetTests {
         assertThat(other.getLastName()).isEqualTo(vet.getLastName());
         assertThat(other.getId()).isEqualTo(vet.getId());
     }
+    
+    @Test
+    public void testParadoxe() {
+        assertThat(false).isEqualTo(!true);
+    }
 
 }

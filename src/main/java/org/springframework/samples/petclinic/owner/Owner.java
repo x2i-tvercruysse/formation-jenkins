@@ -63,6 +63,7 @@ public class Owner extends Person {
 
 
     public String getAddress() {
+        //CA-TODO : refactoriser adresse en objet
         return this.address;
     }
 
