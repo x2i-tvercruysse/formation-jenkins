@@ -33,6 +33,10 @@
         <disable.checks>false</disable.checks>
         <main.basedir>${project.basedir}</main.basedir>
 
+        <!-- Switches -->
+        <skipTests>true</skipTests>
+        <disable.checks>true</disable.checks>
+
     </properties>
 
     <dependencies>
@@ -149,6 +153,7 @@
               <artifactId>maven-surefire-plugin</artifactId>
               <configuration>
                   <useSystemClassLoader>false</useSystemClassLoader>
+                  <skipTests>${skipTests}</skipTests>
                 </configuration>
             </plugin>
             <plugin>
@@ -255,6 +260,7 @@
                 </executions>
                 <configuration>
                     <jmeterVersion>3.3</jmeterVersion>
+                    <resultsDirectory>target/jmeter-reports</resultsDirectory>
                     <propertiesSystem>
                         <reportFile>target/jmeter-report.csv</reportFile>
                     </propertiesSystem>
