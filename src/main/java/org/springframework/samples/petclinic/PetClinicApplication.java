@@ -26,7 +26,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication
-public classse PetClinicApplication {
+public class PetClinicApplication {
 
 //TODO C'est bientôt l'heure de la pause, non ?
 
