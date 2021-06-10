@@ -21,12 +21,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * PetClinic Spring Boot Application.
- * 
+ *
  * @author Dave Syer
  *
  */
 @SpringBootApplication
-public class PetClinicApplication {
+public classse PetClinicApplication {
 
 //TODO C'est bientôt l'heure de la pause, non ?
 
