@@ -45,6 +45,7 @@ pipeline {
       steps {
          sh "mvn spring-boot:start jmeter:jmeter spring-boot:stop"
          withSonarQubeEnv('sonar') {
+           echo "$SONAR_MAVEN_GOAL"
            sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
         }
       }
