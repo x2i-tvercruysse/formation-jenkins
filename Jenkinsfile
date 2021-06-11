@@ -28,28 +28,16 @@ pipeline {
         recordIssues(tools: [taskScanner(highTags: '//TODO', includePattern: '**/*.java', normalTags: '//ORSYS-FIXME')])
       }
     }
+    
+    stage('Junit') {
+      steps {
+        recordIssues(tools: [junitParser(pattern: 'target/surefire-reports/TEST-*.xml')])
+      }
+    }
 
     stage('SONAR & Jmeter') {
-      parallel {
-        stage('one') {
-          steps {
-            echo 'I\'m on the first branch!'
-          }
-        }
-
-        stage('two') {
-          steps {
-            echo 'I\'m on the second branch!'
-          }
-        }
-
-        stage('three') {
-          steps {
-            echo 'I\'m on the third branch!'
-            echo 'But you probably guessed that already.'
-          }
-        }
-
+      steps {
+         sh "mvn spring-boot:start jmeter:jmeter spring-boot:stop"
       }
     }
 
