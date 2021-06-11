@@ -44,6 +44,9 @@ pipeline {
     stage('SONAR & Jmeter') {
       steps {
          sh "mvn spring-boot:start jmeter:jmeter spring-boot:stop"
+         withSonarQubeEnv('sonar') {
+           sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
+        }
       }
     }
 
