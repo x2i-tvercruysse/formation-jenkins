@@ -13,7 +13,7 @@ pipeline {
    
   // The tools directive allows you to automatically install tools configured in
   // Jenkins - note that it doesn't work inside Docker containers currently.
-  tools {
+  //tools {
     // Here we have pairs of tool symbols (not all tools have symbols, so if you
     // try to use one from a plugin you've got installed and get an error and the
     // tool isn't listed in the possible values, open a JIRA against that tool!)
@@ -21,8 +21,8 @@ pipeline {
     //jdk "jdk8"
     // Uh-oh, this is going to cause a validation issue! There's no configured
     // maven tool named "mvn3.3.8"!
-    maven "MVN_353"
-  }
+    //maven "MVN_353"
+  //}
    
   environment {
     // Environment variable identifiers need to be both valid bash variable
@@ -52,7 +52,7 @@ pipeline {
            
           // This'll output 3.3.3, since that's the Maven version we
           // configured above. Well, once we fix the validation error!
-          sh "mvn -version"
+          //sh "mvn -version"
         }
       }
        
@@ -70,15 +70,15 @@ pipeline {
      
     stage('second stage') {
       // You can override tools, environment and agent on each stage if you want.
-      tools {
+      //tools {
         // Here, we're overriding the original maven tool with a different
         // version.
-        maven "MVN_353"
-      }
+        //maven "MVN_353"
+      //}
        
       steps {
         echo "This time, the Maven version should be 3.5.3"
-        sh "mvn -version"
+        //sh "mvn -version"
       }
     }
      
@@ -105,37 +105,37 @@ pipeline {
     }
   }
    
-  post {
+  //post {
     // Always runs. And it runs before any of the other post conditions.
-    always {
+    //always {
       // Let's wipe out the workspace before we finish!
-      deleteDir()
-    }
+      //deleteDir()
+    //}
      
-    success {
-      mail(from: "bob@example.com",
-           to: "steve@example.com",
-           subject: "That build passed.",
-           body: "Nothing to see here")
-    }
+    //success {
+      //mail(from: "bob@example.com",
+        //   to: "steve@example.com",
+        //   subject: "That build passed.",
+        //   body: "Nothing to see here")
+    //}
  
-    failure {
-      mail(from: "bob@example.com",
-           to: "steve@example.com",
-           subject: "That build failed!",
-           body: "Nothing to see here")
-    }
-  }
+    //failure {
+      //mail(from: "bob@example.com",
+      //     to: "steve@example.com",
+      //     subject: "That build failed!",
+      //     body: "Nothing to see here")
+    //}
+  //}
    
   // The options directive is for configuration that applies to the whole job.
-  options {
+  //options {
     // For example, we'd like to make sure we only keep 10 builds at a time, so
     // we don't fill up our storage!
-    buildDiscarder(logRotator(numToKeepStr:'10'))
+    //buildDiscarder(logRotator(numToKeepStr:'10'))
      
     // And we'd really like to be sure that this build doesn't hang forever, so
     // let's time it out after an hour.
-    timeout(time: 60, unit: 'MINUTES')
-  }
+    //timeout(time: 60, unit: 'MINUTES')
+  //}
  
 }
