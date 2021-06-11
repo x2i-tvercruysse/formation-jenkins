@@ -45,9 +45,15 @@ pipeline {
       steps {
          sh "mvn spring-boot:start jmeter:jmeter spring-boot:stop"
          withSonarQubeEnv('sonar') {
-           echo "$SONAR_MAVEN_GOAL"
-           sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
+           sh "mvn $SONAR_MAVEN_GOAL"
         }
+      }
+    }
+    
+    stage('Archive') {
+      steps {
+        sh 'tar -zcvf sources.tar.gz src'
+        archiveArtifacts artifacts: 'archive \'target/spring-petclinic-*.jar, sources.tar.gz\'', followSymlinks: false 
       }
     }
 
