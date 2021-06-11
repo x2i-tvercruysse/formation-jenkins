@@ -53,7 +53,7 @@ pipeline {
     stage('Archive') {
       steps {
         sh 'tar -zcvf sources.tar.gz src'
-        archiveArtifacts artifacts: 'archive \'target/spring-petclinic-*.jar, sources.tar.gz\'', followSymlinks: false 
+        archiveArtifacts artifacts: 'target/spring-petclinic-*.jar, sources.tar.gz', followSymlinks: false 
       }
     }
 
