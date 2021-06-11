@@ -22,7 +22,10 @@ pipeline {
 
     stage('checkstyle') {
       steps {
-        echo 'This time, the Maven version should be 3.5.3'
+        sh "mvn checkstyle:checkstyle"
+        recordIssues(tools: [checkStyle(pattern: 'target/checkstyle-result.xml')])
+        recordIssues(tools: [java()])
+        recordIssues(tools: [taskScanner(highTags: '//TODO', includePattern: '**/*.java', normalTags: '//ORSYS-FIXME')])
       }
     }
 
