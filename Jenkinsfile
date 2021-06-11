@@ -1,7 +1,10 @@
 pipeline {
   agent any
+  tools {
+     maven "mvn_381"
+  }
   stages {
-    stage('first stage') {
+    stage('MVN Build') {
       post {
         success {
           echo 'Only when we haven\'t failed running the first stage'
@@ -13,22 +16,17 @@ pipeline {
 
       }
       steps {
-        timeout(time: 10, unit: 'MINUTES') {
-          echo 'We\'re not doing anything particularly special here.'
-          echo 'Just making sure that we don\'t take longer than five minutes'
-          echo 'Which, I guess, is kind of silly.'
-        }
-
+        sh "mvn clean install"
       }
     }
 
-    stage('second stage') {
+    stage('checkstyle') {
       steps {
         echo 'This time, the Maven version should be 3.5.3'
       }
     }
 
-    stage('third stage') {
+    stage('SONAR & Jmeter') {
       parallel {
         stage('one') {
           steps {
